@@ -36,7 +36,7 @@ export default function AboutSection() {
         >
           <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-white shadow-xl">
             <Image
-              src="/images/logo.png"
+              src="/images/logo2.jpg"
               alt="Fong Sing Restaurant"
               fill
               className="object-contain p-6"
