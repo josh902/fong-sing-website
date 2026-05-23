@@ -87,7 +87,7 @@ export default function HeroSection() {
             asChild
             size="lg"
             variant="outline"
-            className="w-full sm:w-auto border-white text-white hover:bg-white hover:text-brand-dark px-8"
+            className="w-full sm:w-auto bg-transparent border-white text-white hover:bg-white hover:text-brand-dark px-8"
           >
             <a href="#reserve">Make a Reservation</a>
           </Button>
