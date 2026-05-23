@@ -34,11 +34,11 @@ export default function Navbar() {
         {/* Logo */}
         <a href="#home" className="flex items-center">
           <Image
-            src="/images/logo.jpg"
+            src="/images/logo.png"
             alt="Fong Sing Restaurant"
             width={48}
             height={48}
-            className="h-10 w-10 rounded-sm object-cover"
+            className="h-10 w-10 object-contain"
             priority
           />
         </a>
@@ -86,11 +86,11 @@ export default function Navbar() {
 
               <a href="#home" className="flex items-center mb-8" onClick={() => setOpen(false)}>
                 <Image
-                  src="/images/logo.jpg"
+                  src="/images/logo.png"
                   alt="Fong Sing Restaurant"
                   width={48}
                   height={48}
-                  className="h-12 w-12 rounded-sm object-cover"
+                  className="h-12 w-12 object-contain"
                   priority
                 />
               </a>
