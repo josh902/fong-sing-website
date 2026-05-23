@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -32,15 +31,11 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Logo */}
-        <a href="#home" className="flex items-center">
-          <Image
-            src="/images/logo.png"
-            alt="Fong Sing Restaurant"
-            width={48}
-            height={48}
-            className="h-10 w-10 object-contain mix-blend-multiply"
-            priority
-          />
+        <a
+          href="#home"
+          className="font-playfair text-xl text-brand-gold-light hover:text-brand-gold transition-colors"
+        >
+          Fong Sing Restaurant
         </a>
 
         {/* Desktop nav */}
@@ -84,16 +79,9 @@ export default function Navbar() {
             >
               <SheetTitle className="sr-only">Navigation</SheetTitle>
 
-              <a href="#home" className="flex items-center mb-8" onClick={() => setOpen(false)}>
-                <Image
-                  src="/images/logo.png"
-                  alt="Fong Sing Restaurant"
-                  width={48}
-                  height={48}
-                  className="h-12 w-12 object-contain mix-blend-multiply"
-                  priority
-                />
-              </a>
+              <span className="font-playfair text-brand-gold-light text-lg mb-8">
+                Fong Sing Restaurant
+              </span>
 
               <nav className="flex flex-col gap-6">
                 {NAV_LINKS.map((link) => (

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion, type Variants } from "framer-motion";
 
 const PILLS = [
@@ -33,10 +34,14 @@ export default function AboutSection() {
           viewport={{ once: true }}
           className="relative"
         >
-          <div
-            className="w-full aspect-[4/3] rounded-2xl"
-            style={{ background: "linear-gradient(135deg, #3a0e00, #8B1A1A)" }}
-          />
+          <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-black">
+            <Image
+              src="/images/logo.png"
+              alt="Fong Sing Restaurant"
+              fill
+              className="object-contain p-6"
+            />
+          </div>
           {/* Circular badge */}
           <div className="absolute bottom-4 right-4 w-24 h-24 rounded-full bg-brand-gold shadow-lg flex items-center justify-center">
             <span className="text-brand-dark font-bold text-center leading-tight text-[11px]">
