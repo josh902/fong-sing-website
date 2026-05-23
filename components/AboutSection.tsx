@@ -34,7 +34,7 @@ export default function AboutSection() {
           viewport={{ once: true }}
           className="relative"
         >
-          <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-black">
+          <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-white shadow-xl">
             <Image
               src="/images/logo.png"
               alt="Fong Sing Restaurant"
