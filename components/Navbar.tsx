@@ -38,7 +38,7 @@ export default function Navbar() {
             alt="Fong Sing Restaurant"
             width={48}
             height={48}
-            className="h-10 w-10 object-contain"
+            className="h-10 w-10 object-contain mix-blend-multiply"
             priority
           />
         </a>
@@ -90,7 +90,7 @@ export default function Navbar() {
                   alt="Fong Sing Restaurant"
                   width={48}
                   height={48}
-                  className="h-12 w-12 object-contain"
+                  className="h-12 w-12 object-contain mix-blend-multiply"
                   priority
                 />
               </a>
