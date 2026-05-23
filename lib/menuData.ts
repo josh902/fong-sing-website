@@ -1,0 +1,305 @@
+export interface MenuItem {
+  name: string;
+  price: string;
+  description?: string;
+  badge?: string;
+}
+
+export interface MenuCategory {
+  id: string;
+  label: string;
+  note?: string;
+  items: MenuItem[];
+}
+
+export const menuData: MenuCategory[] = [
+  {
+    id: "pho-vietnamese",
+    label: "Pho & Vietnamese",
+    items: [
+      { name: "Beef Pho", price: "$15 / $17" },
+      { name: "Chicken Pho", price: "$15 / $17" },
+      { name: "BBQ Pork Pho", price: "$15 / $17" },
+      { name: "Shrimp Pho", price: "$16 / $18" },
+      { name: "Pho Dac Biet", price: "$15.50 / $17.50", description: "Chicken, beef & meatballs" },
+      { name: "Tom Yum Soup", price: "$9.50" },
+      { name: "Salad Roll", price: "$3.50" },
+      { name: "Spring Roll with Vietnamese Sauce", price: "$3.00" },
+      { name: "Tofu Noodle Bowl", price: "$13.00" },
+      { name: "Noodle Bowl with Spring Rolls", price: "$14.00" },
+      { name: "Noodle Bowl", price: "$16.00", description: "Grilled chicken, pork, or stir-fried with lemon grass" },
+      { name: "Seafood Noodle Bowl", price: "$18.00", description: "Shrimp or scallop" },
+      { name: "Black Bean Rice Bowl", price: "$14.00" },
+      { name: "Lemongrass Rice Bowl", price: "$14.00" },
+      { name: "Ginger Chicken Rice Bowl", price: "$14.00" },
+      { name: "Curry Chicken Noodle", price: "$15.00" },
+      { name: "Pad Thai", price: "$16.50", description: "Chicken, pork, or beef · with shrimp $18.50" },
+      { name: "Spicy Beef Soup", price: "$18.00" },
+      { name: "Pad Sew", price: "$17.00" },
+      { name: "Rice and Pork Platter", price: "$18.00" },
+    ],
+  },
+  {
+    id: "starters",
+    label: "Starters",
+    items: [
+      { name: "Steamed Buns", price: "$9.50", description: "2 pc" },
+      { name: "Spring Rolls", price: "$3.00", description: "Pork or vegetable" },
+      { name: "Egg Roll", price: "$2.75", description: "Regular or curry" },
+      { name: "BBQ Pork Slices", price: "$14.50" },
+      { name: "Chicken Wings", price: "$14.50", description: "6 pc" },
+      { name: "Pork Dumplings", price: "$14.00", description: "12 pc" },
+      { name: "Crab Rangoon", price: "$12.50", description: "8 pc" },
+      { name: "Sesame Seed Balls", price: "$9.50", description: "3 pc" },
+      { name: "Fried Wontons", price: "$8.50", description: "12 pc" },
+    ],
+  },
+  {
+    id: "soups",
+    label: "Soups",
+    items: [
+      { name: "Mushroom Egg Drop Soup", price: "$7.50" },
+      { name: "Wonton Soup", price: "$7.50" },
+      { name: "Wonton Noodle Soup", price: "$11.00" },
+      { name: "Hot & Sour Soup", price: "$7.50" },
+    ],
+  },
+  {
+    id: "rice-dishes",
+    label: "Rice Dishes",
+    items: [
+      { name: "Chicken, Beef, or Pork Fried Rice", price: "$13.00" },
+      { name: "Vegetable or Mushroom Fried Rice", price: "$13.00" },
+      { name: "House Fried Rice", price: "$15.00" },
+      { name: "Shrimp or Scallop Fried Rice", price: "$16.00" },
+      { name: "Plain Fried Rice", price: "$10.00" },
+      { name: "Yang Chow", price: "$15.00" },
+      { name: "Steamed Rice", price: "$4.00" },
+    ],
+  },
+  {
+    id: "beef",
+    label: "Beef",
+    items: [
+      { name: "Beef & Broccoli", price: "$15.50" },
+      { name: "Beef & Green Peppers", price: "$15.50" },
+      { name: "Beef & Tomato", price: "$15.50" },
+      { name: "Beef & Chinese Cabbage", price: "$15.50" },
+      { name: "Beef & Mushroom", price: "$16.50" },
+      { name: "Orange Beef", price: "$16.50" },
+    ],
+  },
+  {
+    id: "chicken",
+    label: "Chicken",
+    items: [
+      { name: "Chicken & Green Peppers", price: "$14.50" },
+      { name: "Chicken & Chinese Cabbage", price: "$14.50" },
+      { name: "Chicken & Tomato", price: "$15.00" },
+      { name: "Chicken & Broccoli", price: "$14.50" },
+      { name: "Lemon or Orange Chicken", price: "$15.50" },
+    ],
+  },
+  {
+    id: "pork-ribs",
+    label: "Pork & Ribs",
+    items: [
+      { name: "BBQ Pork & Broccoli", price: "$15.00" },
+      { name: "BBQ Pork & Chinese Cabbage", price: "$15.00" },
+      { name: "BBQ Pork & Green Peppers", price: "$15.00" },
+      { name: "Honey Garlic Ribs", price: "$16.00" },
+    ],
+  },
+  {
+    id: "sweet-sour",
+    label: "Sweet & Sour",
+    items: [
+      { name: "Chicken or Pork", price: "$15.00" },
+      { name: "Spicy Dry Pork", price: "$15.50" },
+      { name: "Shrimp", price: "$18.00" },
+      { name: "Scallops", price: "$18.00" },
+    ],
+  },
+  {
+    id: "curry",
+    label: "Curry",
+    items: [
+      { name: "Curry Chicken", price: "$14.50" },
+      { name: "Curry Pork", price: "$14.50" },
+      { name: "Curry Beef", price: "$15.50" },
+      { name: "Curry Scallops", price: "$18.50" },
+      { name: "Curry Shrimp", price: "$18.50" },
+    ],
+  },
+  {
+    id: "szechuan",
+    label: "Szechuan",
+    items: [
+      { name: "Pork or Chicken", price: "$14.50" },
+      { name: "Szechuan Beef", price: "$15.50" },
+      { name: "Mixed Vegetables", price: "$12.00" },
+      { name: "Shrimp or Scallops", price: "$18.50" },
+      { name: "Ginger Beef", price: "$16.50" },
+    ],
+  },
+  {
+    id: "chow-mein-chop-suey",
+    label: "Chow Mein / Chop Suey",
+    items: [
+      { name: "BBQ Pork, Beef, or Chicken", price: "$13.00" },
+      { name: "Vegetable or Mushroom", price: "$12.50" },
+      { name: "Shrimp or Scallop", price: "$16.00" },
+    ],
+  },
+  {
+    id: "egg-foo-young",
+    label: "Egg Foo Young",
+    items: [
+      { name: "Vegetable or Mushroom", price: "$15.00" },
+      { name: "Chicken, BBQ Pork, or Beef", price: "$15.00" },
+      { name: "Shrimp or Scallop", price: "$16.00" },
+      { name: "House Foo Young", price: "$16.00" },
+    ],
+  },
+  {
+    id: "gai-ding",
+    label: "Gai Ding",
+    items: [
+      { name: "Chicken or Pork Gai Ding", price: "$14.50" },
+      { name: "Chicken Soo Gai", price: "$15.00" },
+      { name: "Beef Gai Ding", price: "$15.00" },
+      { name: "Shrimp or Scallop Ding", price: "$18.50" },
+      { name: "Vegetable Ding", price: "$13.00" },
+    ],
+  },
+  {
+    id: "veggies",
+    label: "Veggies",
+    items: [
+      { name: "Stir Fry Chinese Cabbage", price: "$12.00" },
+      { name: "Stir Fry Green Peppers", price: "$12.00" },
+      { name: "Stir Fried Mushrooms", price: "$14.00" },
+      { name: "Stir Fried Mixed Vegetables", price: "$12.00" },
+    ],
+  },
+  {
+    id: "chef-specialties",
+    label: "Chef Specialties",
+    items: [
+      { name: "Crispy Skin Chicken", price: "Half $15 / Whole $28.50", badge: "Chef's Special" },
+      { name: "BBQ Duck", price: "Half $30 / Whole $55", badge: "Chef's Special" },
+      { name: "Chow Hoi Shin", price: "$19.00" },
+      { name: "Cantonese Chow Men", price: "from $14.00" },
+      { name: "Pineapple Pork or Chicken", price: "$16.00" },
+      { name: "Moo Goo Gai Pan", price: "$14.50" },
+      { name: "Butterfly Shrimp", price: "$19.00" },
+      { name: "Gum Loo Wonton", price: "$18.00" },
+      { name: "Tai Dop Woy", price: "$17.50" },
+      { name: "Vermicelli Singapore Style", price: "$17.00" },
+      { name: "Bolo Gai Pan", price: "$15.00" },
+      { name: "Ma Pu Tofu", price: "$16.00" },
+      { name: "Tofu with Beef & Vegetables", price: "$16.00" },
+      { name: "Tofu with Vegetables", price: "$15.00" },
+      { name: "Shanghai Noodles", price: "$17.50" },
+      { name: "Shrimp with Veggies", price: "$18.00" },
+      { name: "Shrimp with Tomato Sauce", price: "$18.00" },
+      { name: "Shrimp with Lobster Sauce", price: "$18.50" },
+      { name: "Cashew Chicken", price: "$16.50" },
+      { name: "General Tao Chicken", price: "$15.50" },
+      { name: "Lo Mein Vegetable", price: "$13.50" },
+      { name: "Lo Mein", price: "$15.50", description: "Chicken, beef, or BBQ pork" },
+    ],
+  },
+  {
+    id: "lunch-specials",
+    label: "Lunch Specials",
+    note: "Available 11:30AM – 3:00PM · $12 each",
+    items: [
+      { name: "Combo A", price: "$12.00", description: "Egg Roll + Chicken Fried Rice + Chicken Gai Ding" },
+      { name: "Combo B", price: "$12.00", description: "Egg Roll + Chicken Fried Rice + Sweet & Sour Chicken" },
+      { name: "Combo C", price: "$12.00", description: "Egg Roll + Chicken Fried Rice + Beef & Broccoli" },
+      { name: "Combo D", price: "$12.00", description: "Egg Roll + Chicken Fried Rice + Chicken Soo Gai" },
+      { name: "Combo E", price: "$12.00", description: "Egg Roll + Chicken Fried Rice + Honey Garlic Ribs" },
+      { name: "Combo F", price: "$12.00", description: "Egg Roll + Chicken Fried Rice + Pepper Chicken or Beef" },
+      { name: "Combo G", price: "$12.00", description: "Egg Roll + Chicken Fried Rice + Chicken Chow Mein" },
+      { name: "Combo H", price: "$12.00", description: "Egg Roll + Chicken Fried Rice + Lemon or Orange Chicken" },
+      { name: "Combo I", price: "$12.00", description: "Egg Roll + Chow Mein + Sweet & Sour Chicken" },
+      { name: "Combo J", price: "$12.00", description: "Egg Roll + Chow Mein + Honey Garlic Ribs" },
+      { name: "Combo K", price: "$12.00", description: "Egg Roll + Chicken Fried Rice + Szechuan Chicken" },
+      { name: "Combo L", price: "$12.00", description: "Spring Roll + Vegetable Fried Rice + Mixed Veggies" },
+    ],
+  },
+  {
+    id: "combo-platters",
+    label: "Combo Platters",
+    note: "All $16.00 · Includes Egg Roll + Chicken Fried Rice",
+    items: [
+      { name: "Combo #1", price: "$16.00", description: "Egg Roll + Chicken Fried Rice + Sweet & Sour Chicken" },
+      { name: "Combo #2", price: "$16.00", description: "Egg Roll + Chicken Fried Rice + Chicken Chow Mein" },
+      { name: "Combo #3", price: "$16.00", description: "Egg Roll + Chicken Fried Rice + Beef & Broccoli" },
+      { name: "Combo #4", price: "$16.00", description: "Egg Roll + Chicken Fried Rice + General Tao Chicken" },
+      { name: "Combo #5", price: "$16.00", description: "Egg Roll + Chicken Fried Rice + Lemon Chicken" },
+      { name: "Combo #6", price: "$16.00", description: "Egg Roll + Chicken Fried Rice + BBQ Pork & Broccoli" },
+      { name: "Combo #7", price: "$16.00", description: "Egg Roll + Chicken Fried Rice + Chicken & Green Peppers" },
+      { name: "Combo #8", price: "$16.00", description: "Egg Roll + Chicken Fried Rice + Curry Chicken" },
+      { name: "Combo #9", price: "$16.00", description: "Egg Roll + Chicken Fried Rice + Honey Garlic Ribs" },
+      { name: "Combo #10", price: "$16.00", description: "Egg Roll + Chicken Fried Rice + Szechuan Chicken" },
+      { name: "Combo #11", price: "$16.00", description: "Egg Roll + Chicken Fried Rice + Sweet & Sour Pork" },
+      { name: "Combo #12", price: "$16.00", description: "Egg Roll + Chicken Fried Rice + Orange Chicken" },
+      { name: "Combo #13", price: "$16.00", description: "Egg Roll + Chicken Fried Rice + Chicken Gai Ding" },
+      { name: "Combo #14", price: "$16.00", description: "Egg Roll + Chicken Fried Rice + Beef Gai Ding" },
+      { name: "Combo #15", price: "$16.00", description: "Egg Roll + Chicken Fried Rice + Moo Goo Gai Pan" },
+      { name: "Combo #16", price: "$16.00", description: "Egg Roll + Chicken Fried Rice + Chicken & Broccoli" },
+      { name: "Combo #17", price: "$16.00", description: "Egg Roll + Chicken Fried Rice + BBQ Pork Chow Mein" },
+      { name: "Combo #18", price: "$16.00", description: "Egg Roll + Chicken Fried Rice + Cashew Chicken" },
+      { name: "Combo #19", price: "$16.00", description: "Egg Roll + Chicken Fried Rice + Mixed Vegetables" },
+    ],
+  },
+  {
+    id: "group-dinners",
+    label: "Group Dinners",
+    note: "Perfect for sharing!",
+    items: [
+      {
+        name: "Dinner for 2A",
+        price: "$40.50",
+        description: "Egg Roll (2) · Wonton Soup · Sweet & Sour Chicken · Beef & Broccoli · Steamed Rice",
+      },
+      {
+        name: "Dinner for 2B",
+        price: "$49.00",
+        description: "Egg Roll (2) · Hot & Sour Soup · BBQ Pork Slices · Lemon Chicken · Beef & Mushroom · Steamed Rice",
+      },
+      {
+        name: "Dinner for 3A",
+        price: "$57.50",
+        description: "Egg Roll (3) · Wonton Soup · Sweet & Sour Chicken · Beef & Broccoli · Chicken Chow Mein · Steamed Rice",
+      },
+      {
+        name: "Dinner for 3B",
+        price: "$71.50",
+        description: "Egg Roll (3) · Hot & Sour Soup · BBQ Pork Slices · Honey Garlic Ribs · General Tao Chicken · Beef & Broccoli · Steamed Rice",
+      },
+      {
+        name: "Dinner for 4A",
+        price: "$85.50",
+        description: "Egg Roll (4) · Wonton Soup · Sweet & Sour Chicken · Beef & Broccoli · Honey Garlic Ribs · Chicken Chow Mein · Steamed Rice",
+      },
+      {
+        name: "Dinner for 4B",
+        price: "$95.50",
+        description: "Egg Roll (4) · Hot & Sour Soup · BBQ Pork Slices · General Tao Chicken · Lemon Chicken · Beef & Mushroom · Curry Shrimp · Steamed Rice",
+      },
+      {
+        name: "Dinner for 5",
+        price: "$93.75",
+        description: "Egg Roll (5) · Hot & Sour Soup · BBQ Pork Slices · Sweet & Sour Chicken · Beef & Broccoli · Honey Garlic Ribs · Cashew Chicken · Steamed Rice",
+      },
+      {
+        name: "Dinner for 6",
+        price: "$110.00",
+        description: "Egg Roll (6) · Hot & Sour Soup · BBQ Pork Slices · General Tao Chicken · Lemon Chicken · Beef & Broccoli · Honey Garlic Ribs · Cashew Chicken · Curry Shrimp · Steamed Rice",
+      },
+    ],
+  },
+];

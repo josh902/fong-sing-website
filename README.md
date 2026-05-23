@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Fong Sing Restaurant Website
 
-## Getting Started
+Next.js 14 website for Fong Sing Restaurant — Canadian Chinese & Authentic Vietnamese cuisine at 278 Lacewood Drive, Halifax, NS.
 
-First, run the development server:
+## Setup
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # development server at http://localhost:3000
+npm run build    # production build
+npm run start    # serve production build
+npm run lint     # ESLint check
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Dependencies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Package | Purpose |
+|---|---|
+| `next` 14 | App Router framework |
+| `react` / `react-dom` | UI runtime |
+| `typescript` | Type safety |
+| `tailwindcss` | Utility-first styling |
+| `framer-motion` | Page and scroll animations |
+| `lucide-react` | Icon set |
+| `react-hook-form` | Form state management |
+| `@hookform/resolvers` + `zod` | Schema validation |
+| `sonner` | Toast notifications |
+| `@radix-ui/react-dialog` | Sheet/modal primitive (mobile nav) |
+| `@radix-ui/react-select` | Select dropdown primitive |
+| `@radix-ui/react-label` | Accessible form labels |
+| `@radix-ui/react-slot` | `asChild` composition (shadcn) |
+| `class-variance-authority` | Variant-based component styles (shadcn) |
+| `clsx` + `tailwind-merge` | Conditional class merging |
+| `tailwindcss-animate` | Animation utilities |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project Structure
 
-## Learn More
+```
+app/
+  layout.tsx        # Root layout — fonts, metadata, Toaster
+  page.tsx          # Home page — composes all sections
+  globals.css       # Tailwind layers, smooth scroll, brand globals
+  icon.svg          # Placeholder favicon (replace with actual logo)
 
-To learn more about Next.js, take a look at the following resources:
+components/
+  Navbar.tsx        # Fixed top nav with mobile Sheet drawer
+  HeroSection.tsx   # Full-viewport hero with gradient + wave
+  InfoBar.tsx       # 4-item info strip (address, phone, hours, delivery)
+  AboutSection.tsx  # Two-column "Our Story" with image placeholder
+  MenuSection.tsx   # 9-tab menu with animated item grid
+  ReservationSection.tsx  # Booking form (react-hook-form + zod)
+  HoursSection.tsx  # Hours and delivery info
+  Footer.tsx        # Footer with back-to-top button
+  ui/               # shadcn-generated primitives
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+lib/
+  menuData.ts       # Typed menu data — 18 categories, 146+ items
+  utils.ts          # cn() helper
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Before Going Live
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Replace `https://www.fongsing.ca` in `app/layout.tsx` (`metadataBase` and `openGraph.url`) with the actual domain
+- Replace `app/icon.svg` with the real restaurant logo
+- Add an OG image at `public/og-image.jpg` and reference it in the `openGraph` metadata block
